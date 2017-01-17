@@ -24,6 +24,8 @@ LOCAL_SRC_FILES := $(slf4j-common_src_files) $(slf4j-jdk14_src_files)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := slf4j-jdk14
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
+LOCAL_JAVA_LIBRARIES := core-oj core-libart
+LOCAL_NO_STANDARD_LIBRARIES := true
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 include $(CLEAR_VARS)
