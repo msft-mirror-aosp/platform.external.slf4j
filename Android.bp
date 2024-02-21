@@ -58,7 +58,7 @@ java_library {
     host_supported: true,
     hostdex: true,
     srcs: [
-        "slf4j-api/src/main/**/*.java",
+        "slf4j-api/src/main/java/**/*.java",
         "slf4j-jdk14/src/main/java/**/*.java",
     ],
     exclude_srcs: [
