@@ -78,3 +78,19 @@ java_library {
         "//packages/modules/OnDevicePersonalization:__subpackages__",
     ],
 }
+
+java_library_host {
+    name: "slf4j-nop",
+    srcs: [
+        "slf4j-api/src/main/java/**/*.java",
+        "slf4j-nop/src/main/java/**/*.java",
+    ],
+    exclude_srcs: [
+        "slf4j-api/src/main/java/org/slf4j/impl/**/*.java",
+    ],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}
