@@ -58,7 +58,7 @@ java_library {
     host_supported: true,
     hostdex: true,
     srcs: [
-        "slf4j-api/src/main/**/*.java",
+        "slf4j-api/src/main/java/**/*.java",
         "slf4j-jdk14/src/main/java/**/*.java",
     ],
     exclude_srcs: [
@@ -77,4 +77,20 @@ java_library {
         "//external/apache-velocity-engine",
         "//packages/modules/OnDevicePersonalization:__subpackages__",
     ],
+}
+
+java_library_host {
+    name: "slf4j-nop",
+    srcs: [
+        "slf4j-api/src/main/java/**/*.java",
+        "slf4j-nop/src/main/java/**/*.java",
+    ],
+    exclude_srcs: [
+        "slf4j-api/src/main/java/org/slf4j/impl/**/*.java",
+    ],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
 }
