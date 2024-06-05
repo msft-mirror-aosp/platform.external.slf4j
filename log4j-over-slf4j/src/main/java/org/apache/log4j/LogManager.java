@@ -22,12 +22,11 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 /**
- * <p/>
+ * <p>
  * This class is a minimal implementation of the original
  * <code>org.apache.log4j.LogManager</code> class (as found in log4j 1.2)
  * delegating all calls to SLF4J.
- * <p/>
- * <p/>
+ * <p>
  * This implementation does <b>NOT</b> implement the setRepositorySelector(),
  * getLoggerRepository(), exists(), getCurrentLoggers(), shutdown() and
  * resetConfiguration() methods which do not have SLF4J equivalents.
@@ -51,7 +50,7 @@ public class LogManager {
 
     /**
      * Returns a logger instance created by loggerFactory. This method was requested in
-     * <a href="http://bugzilla.slf4j.org/show_bug.cgi?id=234">bug #234</a>. Note that
+     * <a href="http://jira.qos.ch/browse/SLF4J-225">SLF4J-225</a>. Note that
      * log4j-over-slf4j does not ship with a LoggerFactory implementation. If this
      * method is called, the caller must provide his/her own implementation.
      *
@@ -67,7 +66,7 @@ public class LogManager {
     /**
      * This bogus implementation returns an empty enumeration.
      *
-     * @return
+     * @return an Enumeration of current loggers
      */
     public static Enumeration getCurrentLoggers() {
         return new Vector().elements();
