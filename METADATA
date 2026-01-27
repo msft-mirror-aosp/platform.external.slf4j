@@ -17,6 +17,8 @@ third_party {
   identifier {
     type: "Git"
     value: "https://github.com/qos-ch/slf4j.git"
+    version: "955209464d517cd91186f6407a60feb202dc26b8"
+    closest_version: "v_2.0.12"
     primary_source: true
   }
 }
